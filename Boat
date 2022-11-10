@@ -1,0 +1,22 @@
+import unittest
+
+class Boat:
+  def __init__(self):
+    self.floating = False
+
+class Hors:
+  def __init__(self):
+    pass
+
+
+class BoatTest(unittest.TestCase):
+
+  def test_floating(self):
+    self.assertTrue(Boat.floating) #проверка что лодка плавает
+    print (Boat.floating)
+  def test_holes(self):
+    self.assertFalse(Boat.holes) #проверка что в лодке нет дыр
+
+  def test_capacity(self):
+    self.assertTrue(Boat.capacity > Hors.size) # проверка что лошадь поместится в лодку
+  
